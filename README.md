@@ -9,8 +9,8 @@ Los pasos que se toman para decodificar este tipo de cryptos generalmente son lo
       Cuando terminó de hacer el recocido simulado devolverá un score, el alfabeto decifrante y el texto casi descifrado.
       Observe que el texto contendrá palabras con un poco de sentido del alfabeto pero el problema es que el algoritmo sustituirá el espacio por una letra del alfabeto. Entonces una hipótesis para solventar esto es tomar el alfabeto decifrante que retornó con el mejor score y verificar que letra le corresponde al alfabeto normal, por ejemplo: 
       Si en el texto aparece una letra como la S en ves de un espacio, tomamos los alfabetos:
-        ENSLATRFIOWBYVPMUKHGDCZQJX (alfabeto decifrante)
-        ABCDEFGHIJKLMNOPQRSTUVWXYZ (alabeto normal)
+         ENSLATRFIOWBYVPMUKHGDCZQJX (alfabeto decifrante)
+         ABCDEFGHIJKLMNOPQRSTUVWXYZ (alabeto normal)
       y vemos que letra le corresponde al alfabeto normal, en este caso le corresponde a la letra C. Luego reemplazamos la letra C por _ en el texto que se obtuvo de reemplazar los símbolos por letras del alfabeto que se realizó en el punto anterior (3).
    5. Corremos la función RS_sub() de nuevo pero esta ves con el max_iter por defecto y cambiaremos los cuadrigramas de idioma español con espacios en la función log_score().
       Una ves que haya  terminado el proceso obtendremos el resultado con los espacios reemplazados con _.
