@@ -1,5 +1,6 @@
 El razonamiento para resolver este crypto básicamente fue seguir esta [documentación](http://bribes.org/crypto/substitution_mono.html) la cual está explicada en frances.
-Yo hice mi versión de la solución en lenguaje JavaScript. Cabe aclarar que el poder de calculo que se necesita no es apropiada para la plataforma de NodeJS, se debería aplicar el modulo Worker Threads para un procesamiento mas eficiente.
+Yo hice mi versión de la solución en lenguaje JavaScript, cabe aclarar que el poder de calculo que se necesita no es apropiada para la plataforma de NodeJS, se debería aplicar el modulo Worker Threads para un procesamiento mas eficiente.
+
 Los pasos que se toman para decodificar este tipo de cryptos generalmente son los siguientes:
 
 1. En el caso de tipos de cryptos unicode `U+0370` – `U+03FF` que contienen los símbolos griegos, eliminar todos los espacios, puntos y comas. En el caso de que sea un crypto con código unicode `UTF-8`,  eliminar todos los espacios, puntos, comas, acentos y pasar todas las letras a mayúsculas.
